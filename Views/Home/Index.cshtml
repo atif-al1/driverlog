@@ -1,0 +1,59 @@
+﻿@model Trip
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" width="device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/wwwroot/css/site.css">
+    <title>Driver App</title>
+</head>
+
+<body class="wrapper">
+    <h1>Driver App</h1>
+    <div class="titles">
+        <h2>Trip Information</h2>
+    </div>
+
+    <form asp-action="Validate" asp-controller="Home" method="post">
+        <div class="tripInput">
+            <ul>
+                <li>
+                    <label asp-for="driver"></label>
+                    <input asp-for="driver">
+                    <span asp-validation-for="driver" class="error"></span>
+                </li>
+                <li>
+                    <label asp-for="start"></label>
+                    <input asp-for="start" type="time" min="5:00" max="23:59">
+                    <span asp-validation-for="start"></span>
+                </li>
+            
+                <li>
+                    <label asp-for="end">End Time:</label>
+                    <input asp-for="end" type="time" min="5:00" max="23:59">
+                    <span asp-validation-for="end"></span>
+                </li>
+
+                <li>
+                    <label asp-for="miles"></label>
+                    <input name="miles" type="integer">
+                    <span asp-validation-for="miles"></span>
+                </li>
+
+                <li>
+                    <input type="submit" value="Submit" class="submit">    
+                </li>
+            </ul>
+        </div>  
+    </form>
+    <div class="titles" >
+        <h2 >Summary</h2>
+    </div>
+    <partial name="_IndexPartial.cshtml"/>
+</body>
+</html>
+
+
+

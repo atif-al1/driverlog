@@ -1,0 +1,56 @@
+﻿#wrapper {
+    margin:auto;
+}
+
+body{
+    background-color:#4ABDAC;
+}
+
+h1{
+    text-align: center;
+    font-size: 500%;
+    font-style: italic;
+    font-family: fantasy;
+    color: #DFDCE3;
+}
+
+h2{
+    text-align: center;
+}
+
+.titles{
+    background-color: gray;
+    border-style: solid;
+    border-width: 1%;
+    border-color: black;
+    border-radius: 70%;
+    color:rgb(146, 17, 17);
+    
+
+}
+
+.tripInput{
+    justify-content: center;
+    display: flex;
+}
+
+ul{
+    margin: 5%;
+    font-size: 200%; 
+    list-style-type: none;
+
+}
+
+.submit{
+    margin-top: 3%;
+    background-color: rgb(202, 52, 52);
+}
+
+.summaries p{
+    font-size: 200%;
+    font-style: bold;
+}
+
+.error{
+    color: red;
+}

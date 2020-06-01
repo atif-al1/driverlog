@@ -1,0 +1,14 @@
+@model Trip
+<div class="summaries">
+    @if (ViewBag.List != null){
+        List<Trip> sortTrips = ViewBag.List;
+        sortTrips.Sort((x,y) => y.miles.CompareTo(x.miles));
+        foreach (var i in sortTrips){
+            <p>@i.print()</p>   
+        }
+    }
+    else{
+        <p>No Summary</p>
+    }
+</div>
+
